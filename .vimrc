@@ -4,6 +4,7 @@ set expandtab
 set shiftwidth=2
 set foldmethod=syntax
 set foldlevel=2
+set autochdir
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 set backupdir=$HOME/settings/vim_bak/
