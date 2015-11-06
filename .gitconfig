@@ -1,7 +1,12 @@
+[ghq]
+  root = ~/src
+[user]
+	name = Junichiro Kasuya
+	email = junichiro.kasuya@gmail.com
 [alias]
   st = status
+  di = diff
+  co = commit
+  ad = add
   stt = status -uno
   difff = diff --word-diff
-[user]
-  name = junichiro kasuya
-  email = junichiro.kasuya@gmail.com
