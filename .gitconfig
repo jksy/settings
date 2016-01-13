@@ -10,3 +10,6 @@
   ad = add
   stt = status -uno
   difff = diff --word-diff
+  br = branch
+[push]
+	default = matching
