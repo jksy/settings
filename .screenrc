@@ -1,1 +1,31 @@
+hardstatus on
 hardstatus alwayslastline '%02c:%s %{= .g}%H%{-} %L=%-w%45L>%{=u b.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
+defnonblock on
+
+vbell off
+bell_msg "Bell in window %n (%t)^G"
+
+defscrollback 5000
+
+term screen-256color
+termcapinfo  xterm-256color hs@:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l\E[?1;4;6l
+
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+
+bind j focus down
+bind k focus up
+bind h focus top
+bind l focus bottom
+
+zombie ' '
