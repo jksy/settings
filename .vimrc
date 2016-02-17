@@ -13,7 +13,7 @@ filetype indent on
 filetype plugin on
 
 set foldmethod=syntax
-set foldlevel=2
+set foldlevel=1
 "set foldnestmax=2
 nnoremap <silent> <Space> za
 vnoremap <Space> zf
