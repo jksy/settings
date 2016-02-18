@@ -22,6 +22,7 @@ set directory=$HOME/settings/vim_bak/
 
 " go settings
 autocmd BufWritePre *.go :silent Fmt
+autocmd BufWritePre * :%s/\s\+$//ge
 
 " for treetop
 set runtimepath+=~/treetop-vim
