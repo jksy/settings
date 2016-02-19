@@ -28,7 +28,14 @@ autocmd BufWritePre * :%s/\s\+$//ge
 set runtimepath+=~/treetop-vim
 
 let mapleader = ","
-nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix
+
+" for global yank&paste
+vmap Y :w! ~/settings/vim_bak/clipboard<CR>
+nmap Y V:w! ~/settings/vim_bak/clipboard<CR>
+nmap <leader>P :r! cat ~/settings/vim_bak/clipboard<CR>
+
+" for quickrun
+nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
 
 "NeoBundle Scripts-----------------------------
 if &compatible

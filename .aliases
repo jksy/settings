@@ -1,0 +1,3 @@
+alias vim='~/local/bin/vim'
+alias rg='bundle exec rake gen'
+alias rt='bundle exec rake test'

@@ -6,5 +6,6 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-alias rg='bundle exec rake gen'
-alias rt='bundle exec rake test'
+if [ -f ~/.aliases ]; then
+	. ~/.aliases
+fi
