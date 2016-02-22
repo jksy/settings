@@ -13,3 +13,5 @@
   br = branch
 [push]
 	default = matching
+[color]
+	ui = true
