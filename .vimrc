@@ -30,9 +30,10 @@ set runtimepath+=~/treetop-vim
 let mapleader = ","
 
 " for global yank&paste
-vmap Y :w! ~/settings/vim_bak/clipboard<CR>
-nmap Y V:w! ~/settings/vim_bak/clipboard<CR>
-nmap <leader>P :r! cat ~/settings/vim_bak/clipboard<CR>
+vmap <leader>Y :w! ~/settings/vim_bak/clipboard<CR>
+nmap <leader>Y V:w! ~/settings/vim_bak/clipboard<CR>
+nmap <leader>P :r ~/settings/vim_bak/clipboard<CR>
+nmap <leader>p :r ~/settings/vim_bak/clipboard<CR>
 
 " for quickrun
 nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
