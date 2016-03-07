@@ -17,8 +17,10 @@ set foldlevel=1
 "set foldnestmax=2
 nnoremap <silent> <Space> za
 vnoremap <Space> zf
+nnoremap <C-]> g<C-]>
 set backupdir=$HOME/settings/vim_bak/
 set directory=$HOME/settings/vim_bak/
+set tags=tags;
 
 " go settings
 autocmd BufWritePre *.go :silent Fmt
