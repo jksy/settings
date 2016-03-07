@@ -1,5 +1,2 @@
-if [ -f ~/local/bin/vim ]; then
-  alias vim='~/local/bin/vim'
-fi
 alias rg='bundle exec rake gen'
 alias rt='bundle exec rake test'
