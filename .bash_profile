@@ -5,12 +5,6 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-for file in ~/settings/plugin/**/*.sh; do
-  if [ -f $file ]; then
-    . $file
-  fi
-done
-
 # User specific environment and startup programs
 export GOPATH=$HOME
 export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH

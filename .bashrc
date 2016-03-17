@@ -9,3 +9,10 @@ fi
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
+
+for file in ~/settings/plugin/**/*.sh; do
+  if [ -f $file ]; then
+    . $file
+  fi
+done
+
