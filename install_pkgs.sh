@@ -1,1 +1,1 @@
-sudo yum install -y screen git wget lsof tcpdump telnet nmap nmap-netcat ctags
+sudo yum install -y screen git wget lsof tcpdump telnet nmap nmap-netcat ctags bash-completion.noarch
