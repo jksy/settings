@@ -18,6 +18,7 @@ set foldlevel=1
 nnoremap <silent> <Space> za
 vnoremap <Space> zf
 nnoremap <C-]> g<C-]>
+nnoremap / /\v
 set backupdir=$HOME/settings/vim_bak/
 set directory=$HOME/settings/vim_bak/
 set tags=tags;
@@ -36,9 +37,6 @@ vmap <leader>Y :w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>Y V:w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>P :r ~/settings/vim_bak/clipboard<CR>
 nmap <leader>p :r ~/settings/vim_bak/clipboard<CR>
-
-" for quickrun
-nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
 
 "NeoBundle Scripts-----------------------------
 if &compatible
@@ -86,3 +84,12 @@ filetype plugin indent on
 
 NeoBundleCheck
 ""End NeoBundle Scripts-------------------------
+
+" for quickrun
+nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
+let g:quickrun_config = {
+\      'ruby.bundle' : { 'command': 'ruby', 'cmdopt': 'bundle exec', 'exec': '%o %c %s' }
+\}
+
+au BufNewFile,BufRead *.rb set filetype=ruby.bundle
+
