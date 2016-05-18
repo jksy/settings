@@ -1,0 +1,7 @@
+DIR=~/settings/
+
+for file in $DIR/bash_completion.d/*; do
+  if [ \( -f $file -o -h $file \) -a -r $file ]; then
+    . $file
+  fi
+done
