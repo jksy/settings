@@ -6,7 +6,8 @@
 [alias]
   st = status
   di = diff
-  co = commit
+  ci = commit
+  co = checkout
   ad = add
   stt = status -uno
   difff = diff --word-diff
@@ -18,3 +19,5 @@
 	ui = true
 [credential]
 	helper = cache --timeout=43200
+[core]
+	quotepath = false
