@@ -71,10 +71,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'KamunagiChiduru/unite-javaimport', {
-      \   'depends': ['Shougo/unite.vim'],
-      \}
-NeoBundle 'yuratomo/w3m.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
