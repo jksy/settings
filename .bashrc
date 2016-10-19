@@ -16,3 +16,6 @@ for file in ~/settings/plugin/**/*.sh; do
   fi
 done
 
+
+# added by Anaconda2 4.1.1 installer
+export PATH="/home/jksy/anaconda2/bin:$PATH"

@@ -26,6 +26,8 @@ set tags=tags;
 " go settings
 autocmd BufWritePre *.go :silent Fmt
 autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufNewFile,BufRead *.java setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
+autocmd BufNewFile,BufRead *.groovy setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
 
 " for treetop
 set runtimepath+=~/treetop-vim
@@ -69,6 +71,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'thinca/vim-quickrun.git'
+NeoBundle 'KamunagiChiduru/unite-javaimport', {
+      \   'depends': ['Shougo/unite.vim'],
+      \}
+NeoBundle 'yuratomo/w3m.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }

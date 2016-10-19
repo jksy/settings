@@ -7,7 +7,7 @@ fi
 
 # User specific environment and startup programs
 export GOPATH=$HOME
-export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH:$HOME/node_modules/.bin
 eval "$(rbenv init -)"
 
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
