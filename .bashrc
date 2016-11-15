@@ -19,3 +19,5 @@ done
 
 # added by Anaconda2 4.1.1 installer
 export PATH="/home/jksy/anaconda2/bin:$PATH"
+
+[[ -s "/home/jksy/.gvm/scripts/gvm" ]] && source "/home/jksy/.gvm/scripts/gvm"

@@ -74,6 +74,8 @@ NeoBundle 'thinca/vim-quickrun.git'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+NeoBundle 'fatih/vim-go'
+NeoBundle 'vim-jp/vim-go-extra'
 
 " Required:
 call neobundle#end()
