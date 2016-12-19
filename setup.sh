@@ -1,3 +1,4 @@
+rm ~/.bashrc ~/.bash_profile
 cd $HOME/settings
 for f in $HOME/settings/.*; do
   basename=`basename $f`
