@@ -1,0 +1,194 @@
+# Lynx user defaults file
+
+# user_mode specifies the users level of knowledge with Lynx.
+# The default is NOVICE which displays two extra lines of help at the
+# bottom of the screen to aid the user in learning the basic Lynx
+# commands.  Set user_mode to INTERMEDIATE to turn off the extra info.
+# Use ADVANCED to see the URL of the currently selected link at the
+# bottom of the screen
+#
+# NOTE TO BLIND USERS: setting Lynx to ADVANCED user_mode is one means of
+# ascertaining where an ALT-textless link leads
+user_mode=ADVANCED
+
+# file editor specifies the editor to be invoked when editing Lynx files.
+# if no editor is specified then file editing is disabled unless it
+# is activated from the command line
+#
+# NOTE TO BLIND USERS: specifying an editor is extremely helpful when
+# using mailto: links or sending a comment via the 'c' command.  a
+# speech-friendly guide to using Lynx's default line editor can be found
+# at http://leb.net/blinux/blynx/edit_help.html
+file_editor=NONE
+
+# bookmark_file specifies the name and location of a custom file which the
+# user can paste links to for easy access at a later date
+bookmark_file=lynx_bookmarks.html
+
+# personal_mail_address specifies your personal mail address.  The
+# address will be sent during HTTP file transfers for authorization and
+# logging purposes, and for mailed comments.
+# If you do not want this information given out, leave this field blank
+personal_mail_address=
+
+# if case sensitive searching is on then when the user invokes a search
+# using the 's' or '/' keys, the search performed will be case sensitive
+# instead of case INsensitive.
+# the default is usually off
+case_sensitive_searching=off
+
+# The file sort method specifies which value to sort on when viewing file
+# lists such as FTP directories.  The options are:
+#    BY_FILENAME -- sorts on the name of the file
+#    BY_TYPE     -- sorts on the type of the file
+#    BY_SIZE     -- sorts on the size of the file
+#    BY_DATE     -- sorts on the date of the file
+file_sorting_method=BY_FILENAME
+
+# The character set definition controls the representation of
+# 8 bit characters for your terminal.  If 8 bit characters do
+# not show up correctly on your screen you may try changing
+# to a different 8 bit set or using the 7 bit character approximations.
+# Current valid characters sets are:
+#    ISO Latin 1
+#    ISO Latin 2
+#    Other ISO Latin
+#    DEC Multinational
+#    IBM PC character set
+#    IBM PC codepage 850
+#    Macintosh (8 bit)
+#    NeXT character set
+#    KOI8-R character set
+#    Chinese
+#    Japanese (EUC)
+#    Japanese (SJIS)
+#    Korean
+#    Taipei (Big5)
+#    7 bit approximations
+character_set=ISO Latin 1
+
+# if VI keys are turned on then the normal VI movement keys:
+# j - down    k - up
+# h - left    l - right
+# will be enabled.
+# These keys are only lower case.
+# Capital 'H' will still activate help
+vi_keys=on
+
+# if EMACS keys are turned on then the normal EMACS movement keys:
+# ^N - down    ^p - up
+# ^B - left    ^F - right
+# will be enabled.
+emacs_keys=off
+
+# If sub_bookmarks are turned on then all bookmark operations
+# will first prompt the user to select an active sub-bookmark file.
+# If the default lynx bookmarks file is defined, it will be used as
+# the default selection. When this option is set to 'advanced', and
+# the user mode is advanced, the 'v'iew bookmark command will invoke
+# a statusline prompt instead of the menu seen in novice and intermediate
+# user modes. When this option is set to 'standard', the menu will be
+# presented regardless of user mode. If this option is set to 'off',
+# sub-bookmark files are disabled.
+sub_bookmarks=off
+
+# The following allow you to define sub-bookmark files and definitions.
+# Format is <keyword><letter>=<filename>,<description>
+# Up to MBM_V_MAXFILES (26 MAX) are allowed.
+# We start with 'multi_bookmarkB' since 'A' is reserved!
+multi_bookmarkB=
+multi_bookmarkC=
+multi_bookmarkD=
+multi_bookmarkE=
+multi_bookmarkF=
+multi_bookmarkG=
+multi_bookmarkH=
+multi_bookmarkI=
+multi_bookmarkJ=
+multi_bookmarkK=
+multi_bookmarkL=
+multi_bookmarkM=
+multi_bookmarkN=
+multi_bookmarkO=
+multi_bookmarkP=
+multi_bookmarkQ=
+multi_bookmarkR=
+multi_bookmarkS=
+multi_bookmarkT=
+multi_bookmarkU=
+multi_bookmarkV=
+multi_bookmarkW=
+multi_bookmarkX=
+multi_bookmarkY=
+multi_bookmarkZ=
+
+# if keypad_mode is set to NUMBERS_AS_ARROWS then the numbers
+# on your keypad when the numlock is on will act as arrow keys.
+# i.e. 4 - Left Arrow, 6 - Right Arrow, 2 - Down Arrow, 8 - Up Arrow, etc.
+# if keypad_mode is set to LINKS_ARE_NUMBERED then numbers will appear
+# next to each link and numbers are used to select links.
+# note: some fixed format documents may look disfigured when
+# LINKS_ARE_NUMBERED is enabled.
+#
+# NOTE TO BLIND USERS: this is the most important setting of all.
+# leave it set to LINKS_ARE_NUMBERED so that you can immediately aurally
+# locate links, even if they are embeded in a block of text, while
+# listening to a page. To follow the link, type the number and press
+# enter.
+keypad_mode=LINKS_ARE_NUMBERED
+
+# linedit_mode specifies the key binding used for inputting strings in
+# prompts and forms. if line_editmode is set to DEFAULT_BINDING then the
+# following control characters are used for moving and deleting:
+#
+#      left word char       char word right     Enter = Next line
+#            W E    remove   R T                ^G    = Cancel input
+#             D <-   move  -> F                 ^U    = Erase line
+#
+# Current lineedit modes are:
+#    Default Binding
+# speech-friendly guide to using the default binding of Lynx's line
+# editor can be found at:
+# 	http://leb.net/blinux/blynx/edit_help.html
+lineedit_mode=Default Binding
+
+# preferred_language specifies the language in MIME notation (e.g., en,
+# fr) which Lynx will indicate you prefer in requests to http servers.
+# If a file in that language is available, the server will send it.
+# Otherwise, the server will send the file in it's default language.
+preferred_language=en
+
+# preferred_charset specifies the character set in MIME notation (e.g.,
+# ISO-8859-2, ISO-8859-5) which Lynx will indicate you prefer in requests
+# to http servers using an Accept-Charset header.  The value should NOT
+# include ISO-8859-1 or US-ASCII, since those values are always assumed by
+# default.  If a file in that character set is available, the server will
+# send it.  Otherwise, the server will send the file in ISO-8859-1 or
+# US-ASCII.
+preferred_charset=
+
+# show_dotfiles specifies that the directory listing should include
+# "hidden" (dot) files/directories.  If set "on", this will be
+# honored only if enabled via userdefs.h and/or lynx.cfg, and not
+# restricted via a command line switch.  If display of hidden files
+# is disabled, creation of such files via Lynx also is disabled.
+show_dotfiles=off
+
+# dir_list_styles specifies the directory list style under DIRED_SUPPORT
+# (if implemented).  The default is MIXED_STYLE, which sorts both files and
+# directories together.  FILES_FIRST lists files first and DIRECTORIES_FIRST
+# lists directories first.
+dir_list_style=MIXED_STYLE
+
+# select_popups specifies whether the OPTIONs in a SELECT block which
+# lacks a MULTIPLE attribute are presented as a vertical list of radio
+# buttons or via a popup menu.  Note that if the MULTIPLE attribute is
+# present in the SELECT start tag, Lynx always will create a vertical list
+# of checkboxes for the OPTIONs.  A value of "on" will set popup menus
+# as the default while a value of "off" will set use of radio boxes.
+# The default can be overridden via the -popup command line toggle.
+#
+# NOTE TO BLIND USERS: leave this value set to "off" to have Lynx
+# automatically convert pop-up select option boxes into radio boxes.
+select_popups=off
+

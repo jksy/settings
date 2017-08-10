@@ -16,3 +16,6 @@ export NLS_LANG=Japanese_Japan.AL32UTF8
 
 export JAVA_HOME=$(readlink /etc/alternatives/java | sed -e 's/\(\/jre\)\?\/bin\/java//g')
 [[ -s $HOME/.gvm/scripts/gvm ]] && source $HOME/.gvm/scripts/gvm
+
+export PATH=$PATH:/opt/rh/qt48/root/usr/lib64/qt4/bin
+export LYNX_CFG=~/.lynxrc
