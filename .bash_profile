@@ -8,7 +8,15 @@ fi
 # User specific environment and startup programs
 export GOPATH=$HOME
 export PATH=$HOME/bin:~/.rbenv/bin:$PATH:$HOME/node_modules/.bin
+
+# rbenv
+export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
 export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
