@@ -27,3 +27,7 @@ export JAVA_HOME=$(readlink /etc/alternatives/java | sed -e 's/\(\/jre\)\?\/bin\
 
 export PATH=$PATH:/opt/rh/qt48/root/usr/lib64/qt4/bin
 export LYNX_CFG=~/.lynxrc
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"

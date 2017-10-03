@@ -71,6 +71,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'thinca/vim-quickrun.git'
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'cespare/vim-toml'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
