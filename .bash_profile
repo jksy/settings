@@ -19,3 +19,5 @@ export JAVA_HOME=$(readlink /etc/alternatives/java | sed -e 's/\(\/jre\)\?\/bin\
 
 export PATH=$PATH:/opt/rh/qt48/root/usr/lib64/qt4/bin
 export LYNX_CFG=~/.lynxrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
