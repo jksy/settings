@@ -1,5 +1,6 @@
 alias rg='bundle exec rake gen'
 alias rt='bundle exec rake test'
 alias cr='RUST_BACKTRACE=1 cargo run'
+alias crl='RUST_BACKTRACE=1 cargo run 2>&1 | tee log'
 alias cb='cargo build'
 alias tags='ctags -f .tags'
