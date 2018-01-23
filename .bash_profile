@@ -42,4 +42,5 @@ export LYNX_CFG=~/.lynxrc
 # Rust
 if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
+  export PATH="$HOME/.cargo/bin:$PATH"
 fi
