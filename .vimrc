@@ -99,3 +99,9 @@ let g:quickrun_config = {
 
 au BufNewFile,BufRead *.rb set filetype=ruby.bundle
 
+" http://vim.wikia.com/wiki/Faster_loading_of_large_files
+let g:LargeFile = 1024 * 1024 * 10
+augroup LargeFile
+  autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
+augroup END
+
