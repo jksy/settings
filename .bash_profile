@@ -18,19 +18,21 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Oracle
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
 export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
 export NLS_LANG=Japanese_Japan.AL32UTF8
 
+# JAVA
 export JAVA_HOME=$(readlink /etc/alternatives/java | sed -e 's/\(\/jre\)\?\/bin\/java//g')
 [[ -s $HOME/.gvm/scripts/gvm ]] && source $HOME/.gvm/scripts/gvm
 
-export PATH=$PATH:/opt/rh/qt48/root/usr/lib64/qt4/bin
 export LYNX_CFG=~/.lynxrc
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-
-export PATH="$HOME/.cargo/bin:$PATH"
