@@ -6,6 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+# GO
 export GOPATH=$HOME
 export PATH=$HOME/bin:~/.rbenv/bin:$PATH:$HOME/node_modules/.bin
 
@@ -24,7 +25,10 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -f ~/.cargo/env ]; then
+  . ~/.cargo/env
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # Oracle
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
@@ -35,4 +39,8 @@ export NLS_LANG=Japanese_Japan.AL32UTF8
 export JAVA_HOME=$(readlink /etc/alternatives/java | sed -e 's/\(\/jre\)\?\/bin\/java//g')
 [[ -s $HOME/.gvm/scripts/gvm ]] && source $HOME/.gvm/scripts/gvm
 
+# QT
+export PATH=$PATH:/opt/rh/qt48/root/usr/lib64/qt4/bin
+
+# Lynx
 export LYNX_CFG=~/.lynxrc
