@@ -73,6 +73,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'rust-lang/rust.vim'
 NeoBundle 'cespare/vim-toml'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -104,4 +105,8 @@ let g:LargeFile = 1024 * 1024 * 10
 augroup LargeFile
   autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
 augroup END
+
+" coffee
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
