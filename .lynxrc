@@ -65,7 +65,7 @@ file_sorting_method=BY_FILENAME
 #    Korean
 #    Taipei (Big5)
 #    7 bit approximations
-character_set=ISO Latin 1
+character_set=utf-8
 
 # if VI keys are turned on then the normal VI movement keys:
 # j - down    k - up
@@ -156,7 +156,8 @@ lineedit_mode=Default Binding
 # fr) which Lynx will indicate you prefer in requests to http servers.
 # If a file in that language is available, the server will send it.
 # Otherwise, the server will send the file in it's default language.
-preferred_language=en
+preferred_language=ja
+#preferred_language=en
 
 # preferred_charset specifies the character set in MIME notation (e.g.,
 # ISO-8859-2, ISO-8859-5) which Lynx will indicate you prefer in requests

@@ -74,6 +74,7 @@ NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'rust-lang/rust.vim'
 NeoBundle 'cespare/vim-toml'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'thinca/vim-ref'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -110,3 +111,5 @@ augroup END
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
+" refe
+let g:ref_refe_cmd = $HOME.'/.rbenv/shims/refe'

@@ -6,5 +6,9 @@ export PATH=$PATH:~/.rbenv/bin
 eval "$(rbenv init -)"
 echo eval "\"\$(rbenv init -)\"" >> ~/.bash_profile
 rbenv install 2.3.0
+
 mkdir -p bash_completion.d
 wget -O bash_completion.d/rake https://raw.githubusercontent.com/ai/rake-completion/master/rake
+
+rbenv exec gem install refe2
+bitclust setup
