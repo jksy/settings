@@ -3,4 +3,6 @@ alias rt='bundle exec rake test'
 alias cr='RUST_BACKTRACE=1 cargo run'
 alias crl='RUST_BACKTRACE=1 cargo run 2>&1 | tee log'
 alias cb='cargo build'
+alias be='bundle exec'
 alias tags='ctags -f .tags'
+alias cbr='__git_ps1 "%s"'  # current branch

@@ -28,6 +28,8 @@ autocmd BufWritePre *.go :silent Fmt
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufNewFile,BufRead *.java setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.groovy setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
+let g:go_version_warning = 0 " require Vim 7.4.1689 or newer
+
 
 " for treetop
 set runtimepath+=~/treetop-vim
