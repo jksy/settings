@@ -3,7 +3,7 @@ if defined?(PryByebug)
   Pry.commands.alias_command 's', 'step'
   Pry.commands.alias_command 'n', 'next'
   Pry.commands.alias_command 'f', 'finish'
-  Pry.commands.alias_command 'bt', 'backtrace'
+  Pry.commands.alias_command 'bt', 'pry-backtrace'
   Pry.commands.alias_command 'b', 'break'
 
   Pry::Commands.command /^$/, "repeat last command" do
