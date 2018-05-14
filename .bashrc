@@ -20,4 +20,5 @@ done
 export PATH="/home/jksy/anaconda2/bin:$PATH"
 
 [[ -s "/home/jksy/.gvm/scripts/gvm" ]] && source "/home/jksy/.gvm/scripts/gvm"
+source ".git-prompt.sh"
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '

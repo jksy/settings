@@ -41,6 +41,7 @@ vmap <leader>Y :w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>Y V:w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>P :r ~/settings/vim_bak/clipboard<CR>
 nmap <leader>p :r ~/settings/vim_bak/clipboard<CR>
+nmap <leader>r :QuickRun<space>
 
 "NeoBundle Scripts-----------------------------
 if &compatible
