@@ -103,6 +103,7 @@ let g:quickrun_config = {
 \      'ruby.bundle' : { 'command': 'ruby', 'cmdopt': 'bundle exec', 'exec': '%o %c %s' }
 \}
 
+au BufNewFile,BufRead *.rb set iskeyword+=!
 au BufNewFile,BufRead *.rb set filetype=ruby.bundle
 
 " http://vim.wikia.com/wiki/Faster_loading_of_large_files
