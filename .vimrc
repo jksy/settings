@@ -1,4 +1,4 @@
-colorscheme evening
+colorscheme elflord
 set nocompatible
 set tabstop=2
 set softtabstop=2
