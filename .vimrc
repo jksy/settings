@@ -84,6 +84,7 @@ NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'fatih/vim-go'
 NeoBundle 'vim-jp/vim-go-extra'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'posva/vim-vue'
 
 " Required:
 call neobundle#end()
