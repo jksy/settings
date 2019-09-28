@@ -5,29 +5,46 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# User specific environment and startup programs
-# GO
-export GOPATH=$HOME
-export PATH=$HOME/bin:~/.rbenv/bin:$PATH:$HOME/node_modules/.bin
+export PATH=$HOME/bin:$PATH
 
+# User specific environment and startup programs
 # rbenv
-export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+export RBENV_ROOT="$HOME/.rbenv"
+if [ -f $RBENV_ROOT/bin/rbenv ]; then
+  export PATH=$RBENV_ROOT/bin:$PATH
+  eval "$(rbenv init -)"
+  echo "enable rbenv"
+fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if [ -f $PYENV_ROOT/bin/pyenv ]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+  echo "enable pyenv"
+fi
+
+# phpenv
+export PHPENV_ROOT="$HOME/.phpenv"
+if [ -f $PHPENV_ROOT/bin/phpenv ]; then
+  export PATH=$PHPENV_ROOT/bin:$PATH
+  eval "$(phpenv init -)"
+  echo "enable phpenv"
+fi
 
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+if [ -f $GOENV_ROOT/bin/goenv ]; then
+  export PATH="$GOENV_ROOT/bin:$PATH"
+  eval "$(goenv init -)"
+  echo "enable goenv"
+fi
 
 # rust
 if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
   export PATH="$HOME/.cargo/bin:$PATH"
+  echo "enable cargo(rust)"
 fi
 
 # Oracle
