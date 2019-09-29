@@ -1,4 +1,3 @@
-" delete this file when i user nvim everyday instead of vim
 colorscheme elflord
 set nocompatible
 set tabstop=2
@@ -44,60 +43,29 @@ nmap <leader>P :r ~/settings/vim_bak/clipboard<CR>
 nmap <leader>p :r ~/settings/vim_bak/clipboard<CR>
 nmap <leader>r :QuickRun<space>
 
-"NeoBundle Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" Plug-----------------------------
 
-" Required:
-set runtimepath^=~/.vim/bundle/neobundle.vim/
+call plug#begin('~/.vim/plugged')
+" snippet
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+" git
+Plug 'tpope/vim-fugitive'
+"color schemes
+Plug 'flazz/vim-colorschemes'
+" quick-run
+Plug 'thinca/vim-quickrun'
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'rust-lang/rust.vim'
-NeoBundle 'cespare/vim-toml'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'thinca/vim-ref'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-NeoBundle 'fatih/vim-go'
-NeoBundle 'vim-jp/vim-go-extra'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'posva/vim-vue'
-
-" Required:
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-
-NeoBundleCheck
-""End NeoBundle Scripts-------------------------
+" syntax files for programming languages
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'kchmck/vim-coffee-script'
+Plug 'fatih/vim-go'
+Plug 'vim-jp/vim-go-extra'
+Plug 'slim-template/vim-slim'
+Plug 'posva/vim-vue'
+call plug#end()
 
 " for quickrun
 nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
@@ -118,5 +86,3 @@ augroup END
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
-" refe
-let g:ref_refe_cmd = $HOME.'/.rbenv/shims/refe'

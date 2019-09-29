@@ -6,3 +6,6 @@ for f in $HOME/settings/.*; do
     ln -s $HOME/settings/`basename $f` $HOME/`basename $f`
   fi
 done;
+
+mkdir -p ~/.config/nvim
+ln -s $HOME/settings/nvim/init.vim $HOME/.config/nvim/init.vim

@@ -6,3 +6,4 @@ alias cb='cargo build'
 alias be='bundle exec'
 alias rails-tags='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R ./app ./lib ./spec ./config'
 alias cbr='__git_ps1 "%s"'  # current branch
+alias vim='nvim'
