@@ -28,3 +28,13 @@ if [ -f '/home/jksy/google-cloud-sdk/path.bash.inc' ]; then . '/home/jksy/google
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/jksy/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jksy/google-cloud-sdk/completion.bash.inc'; fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/slss.bash
