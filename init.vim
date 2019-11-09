@@ -46,6 +46,7 @@ nmap <leader>r :QuickRun<space>
 " Plug-----------------------------
 
 call plug#begin('~/.vim/plugged')
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " snippet
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim'
@@ -70,7 +71,8 @@ call plug#end()
 " for quickrun
 nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>
 let g:quickrun_config = {
-\      'ruby.bundle' : { 'command': 'ruby', 'cmdopt': 'bundle exec', 'exec': '%o %c %s' }
+\      'ruby.bundle' : { 'command': 'ruby', 'cmdopt': 'bundle exec', 'exec': '%o %c %s' },
+\      'pythonr.pytest' : { 'command': 'py.test', 'cmdopt': '-s -v', 'hook/shebang/enable': 0, }
 \}
 
 au BufNewFile,BufRead *.rb set iskeyword+=!

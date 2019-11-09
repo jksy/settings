@@ -40,6 +40,9 @@ if [ -f $GOENV_ROOT/bin/goenv ]; then
   echo "enable goenv"
 fi
 
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # rust
 if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
