@@ -23,6 +23,7 @@
 	helper = cache --timeout=43200
 [core]
 	quotepath = false
+	editor = vim -c \"set fenc=utf-8\"
 [diff]
 	tool = vimdiff
 [difftool]
