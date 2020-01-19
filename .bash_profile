@@ -38,6 +38,9 @@ if [ -f $GOENV_ROOT/bin/goenv ]; then
   export PATH="$GOENV_ROOT/bin:$PATH"
   eval "$(goenv init -)"
   echo "enable goenv"
+  # export GOPATH=$HOME/go/
+  # export PATH=$PATH:$GOPATH/bin
+  export GO111MODULE=on
 fi
 
 # yarn
