@@ -32,12 +32,6 @@ if [ -f '/home/jksy/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jksy/
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/sls.bash
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/slss.bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
