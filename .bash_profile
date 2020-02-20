@@ -5,7 +5,7 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:$PATH
 
 # User specific environment and startup programs
 # rbenv
@@ -55,7 +55,7 @@ fi
 
 # Oracle
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
-export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
+export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib:~/local/lib
 export NLS_LANG=Japanese_Japan.AL32UTF8
 
 # JAVA
