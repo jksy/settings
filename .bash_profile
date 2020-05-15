@@ -24,13 +24,13 @@ if [ -f $PYENV_ROOT/bin/pyenv ]; then
   echo "enable pyenv"
 fi
 
-# phpenv
-export PHPENV_ROOT="$HOME/.phpenv"
-if [ -f $PHPENV_ROOT/bin/phpenv ]; then
-  export PATH=$PHPENV_ROOT/bin:$PATH
-  eval "$(phpenv init -)"
-  echo "enable phpenv"
-fi
+# # phpenv
+# export PHPENV_ROOT="$HOME/.phpenv"
+# if [ -f $PHPENV_ROOT/bin/phpenv ]; then
+#   export PATH=$PHPENV_ROOT/bin:$PATH
+#   eval "$(phpenv init -)"
+#   echo "enable phpenv"
+# fi
 
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
@@ -54,8 +54,8 @@ if [ -f ~/.cargo/env ]; then
 fi
 
 # Oracle
-export ORACLE_HOME=/usr/lib/oracle/12.1/client64
-export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib:~/local/lib
+export ORACLE_HOME=/usr/lib/oracle/12.2/client64
+export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib:~/local/lib
 export NLS_LANG=Japanese_Japan.AL32UTF8
 
 # JAVA
