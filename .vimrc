@@ -8,6 +8,7 @@ set autoindent
 set shiftwidth=2
 set winminheight=0
 set autochdir
+set termguicolors
 syntax on
 filetype on
 filetype indent on
@@ -82,8 +83,8 @@ NeoBundle 'thinca/vim-ref'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-NeoBundle 'fatih/vim-go'
-NeoBundle 'vim-jp/vim-go-extra'
+" NeoBundle 'fatih/vim-go'
+" NeoBundle 'vim-jp/vim-go-extra'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'posva/vim-vue'
 

@@ -1,6 +1,8 @@
 hardstatus on
 hardstatus alwayslastline '%02c:%s %{= .g}%H%{-} %L=%-w%45L>%{=u b.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
 defnonblock on
+truecolor on
+startup_message off
 
 vbell off
 bell_msg "Bell in window %n (%t)^G"

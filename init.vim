@@ -1,4 +1,4 @@
-colorscheme elflord
+colorscheme iceberg
 set nocompatible
 set tabstop=2
 set softtabstop=2
@@ -12,6 +12,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set foldmethod=syntax
 set foldlevel=2
 "set foldnestmax=2
@@ -24,7 +28,7 @@ set directory=$HOME/settings/vim_bak/
 set tags=tags;
 
 " go settings
-autocmd BufWritePre *.go :silent Fmt
+" autocmd BufWritePre *.go :silent Fmt
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufNewFile,BufRead *.java setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.groovy setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4
@@ -41,7 +45,12 @@ vmap <leader>Y :w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>Y V:w! ~/settings/vim_bak/clipboard<CR>
 nmap <leader>P :r ~/settings/vim_bak/clipboard<CR>
 nmap <leader>p :r ~/settings/vim_bak/clipboard<CR>
-nmap <leader>r :QuickRun<space>
+nmap <leader>r :QuickRun<CR>
+nmap <leader>t :Tags<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>gf :GFiles<CR>
+nmap <leader>grep :Rg<CR>
+nmap Y yy
 
 " Plug-----------------------------
 
@@ -52,21 +61,40 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 " git
-Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 "color schemes
 Plug 'flazz/vim-colorschemes'
 " quick-run
 Plug 'thinca/vim-quickrun'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " syntax files for programming languages
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'kchmck/vim-coffee-script'
-Plug 'fatih/vim-go'
-Plug 'vim-jp/vim-go-extra'
+Plug 'leafgarland/typescript-vim'
+" Plug 'fatih/vim-go'
+" Plug 'vim-jp/vim-go-extra'
 Plug 'slim-template/vim-slim'
 Plug 'posva/vim-vue'
+Plug 'vim-ruby/vim-ruby'
+
+Plug 'scrooloose/syntastic'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'cocopon/iceberg.vim'
+
+Plug 'github/copilot.vim'
+
+" tabnine https://www.tabnine.com/
+" Plug 'codota/tabnine-vim'
 call plug#end()
+
+" TypeScript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 " for quickrun
 nnoremap <leader>t :QuickRun -outputter/buffer/split ":top 8sp" -runner vimproc -runner/updatetime 60 -outputter/error/success buffer -outputter/error quickfix<cr>

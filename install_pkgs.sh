@@ -1,11 +1,6 @@
 sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 sudo yum install -y epel-release
-sudo yum install -y screen git wget lsof tcpdump telnet nmap nmap-netcat ctags bash-completion.noarch
-
-# install git lfs
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
-sudo yum install -y git-lfs
-git lfs install
+sudo yum install -y screen git git-lfs wget lsof tcpdump telnet nmap nmap-netcat ctags bash-completion.noarch the_silver_searcher
 
 mkdir ~/local/bin
 pushd ~/local/bin
