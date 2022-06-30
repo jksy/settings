@@ -8,4 +8,4 @@ for f in $HOME/settings/.*; do
 done;
 
 mkdir -p ~/.config/nvim
-ln -s $HOME/settings/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -s $HOME/settings/init.vim $HOME/.config/nvim/init.vim

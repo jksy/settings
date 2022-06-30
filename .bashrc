@@ -31,9 +31,9 @@ if [ -f '/home/jksy/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jksy/
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/jksy/src/serverless/node_modules/tabtab/.completions/serverless.bash
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -42,7 +42,10 @@ source "$HOME/.cargo/env"
 . "$HOME/.cargo/env"
 
 
-if [ -f ~/.nodenv/bin/nodenv ]; then
-  export PATH="$HOME/.nodenv/bin:$PATH"
-  eval "$(nodenv init -)"
-fi
+# if [ -f ~/.nodenv/bin/nodenv ]; then
+#   export PATH="$HOME/.nodenv/bin:$PATH"
+#   eval "$(nodenv init -)"
+# fi
+
+export PATH="$HOME/.anyenv/bin:$PATH
+eval "$(anyenv init -)"
