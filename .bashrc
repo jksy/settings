@@ -47,5 +47,5 @@ source "$HOME/.cargo/env"
 #   eval "$(nodenv init -)"
 # fi
 
-export PATH="$HOME/.anyenv/bin:$PATH
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"

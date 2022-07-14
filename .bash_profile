@@ -57,3 +57,7 @@ eval "$(anyenv init -)"
 # for rbenv on ubuntu 22
 # https://github.com/rbenv/ruby-build/discussions/1940
 export RUBY_CONFIGURE_OPTS=--with-openssl-dir=/opt/openssl-1.1.1o
+
+
+# buildpack
+. $(pack completion)
