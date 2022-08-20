@@ -1,4 +1,6 @@
-sudo apt install -y screen git git-lfs wget lsof telnet tcpdump telnet nmap universal-ctags bash-completion curl neovim libfuse-dev
+sudo apt install -y screen git git-lfs wget lsof telnet tcpdump telnet nmap universal-ctags bash-completion curl neovim libfuse-dev \
+  build-essential libssl-dev libreadline-dev zlib1g-dev # ruby
+
 
 mkdir -p ~/local/bin
 pushd ~/local/bin
