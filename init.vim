@@ -16,8 +16,8 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-set foldmethod=syntax
-set foldlevel=2
+" set foldmethod=syntax
+" set foldlevel=2
 "set foldnestmax=2
 nnoremap <silent> <Space> za
 vnoremap <Space> zf

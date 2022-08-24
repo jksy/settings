@@ -38,14 +38,21 @@ if [ -f '/home/jksy/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jksy/
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
-# if [ -f ~/.nodenv/bin/nodenv ]; then
-#   export PATH="$HOME/.nodenv/bin:$PATH"
-#   eval "$(nodenv init -)"
-# fi
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/local/bin" ] ; then
+    PATH="$HOME/local/bin:$PATH"
+fi
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# for rbenv on ubuntu 22
+# https://github.com/rbenv/ruby-build/discussions/1940
+export RUBY_CONFIGURE_OPTS=--with-openssl-dir=/opt/openssl-1.1.1o
+. "$HOME/.cargo/env"
