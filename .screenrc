@@ -9,11 +9,12 @@ bell_msg "Bell in window %n (%t)^G"
 
 defscrollback 5000
 
-# term screen-256color
-# termcapinfo  xterm-256color hs@:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l\E[?1;4;6l
+term screen-256color
+termcapinfo  xterm-256color hs@:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l\E[?1;4;6l
 
-term screen-truecolor
-colorterm truecolor
+# term xterm-256color
+# colorterm truecolor
+# unset TERMCAP
 
 bind k
 bind ^k
