@@ -1,8 +1,8 @@
 [ghq]
   root = ~/src
 [user]
-	name = Junichiro Kasuya
-	email = junichiro.kasuya@gmail.com
+  name = Junichiro Kasuya
+  email = junichiro.kasuya@gmail.com
 [alias]
   st = status
   di = diff
@@ -14,22 +14,24 @@
   br = branch
   tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
   logg = log --graph
-	d = difftool
+  d = difftool
 [push]
-	default = matching
+  default = nothing
 [color]
-	ui = true
+  ui = true
 [credential]
-	helper = cache --timeout=43200
+  helper = cache --timeout=43200
 [core]
-	quotepath = false
-	editor = vim -c \"set fenc=utf-8\"
+  quotepath = false
+  editor = vim -c \"set fenc=utf-8\"
+  autocrlf = false
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+  indentHeuristic = true
 [difftool]
-	prompt = false
+  prompt = false
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
