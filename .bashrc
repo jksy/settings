@@ -56,3 +56,6 @@ eval "$(anyenv init -)"
 # https://github.com/rbenv/ruby-build/discussions/1940
 export RUBY_CONFIGURE_OPTS=--with-openssl-dir=/opt/openssl-1.1.1o
 . "$HOME/.cargo/env"
+
+# https://starship.rs/ja-JP/guide/#🚀-インストール
+eval "$(starship init bash)"
