@@ -90,6 +90,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cocopon/iceberg.vim'
 
 Plug 'github/copilot.vim'
+Plug 'hashivim/vim-terraform'
+let g:terraform_fmt_on_save=1
 
 " tabnine https://www.tabnine.com/
 " Plug 'codota/tabnine-vim'
